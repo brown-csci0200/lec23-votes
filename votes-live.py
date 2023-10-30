@@ -19,7 +19,8 @@ class ElectionRecord:
     def cast_vote(self, for_cand: str):
         if for_cand in self.candidates:
             self.votes.append(for_cand) # append is the mutable operation on lists, + is immutable
-        else: raise("Unknown candidate " + str(for_cand))
+        else: 
+            raise("Unknown candidate " + str(for_cand))
 
     def count_votes_for(self, for_cand: str) -> int:
         total = 0
@@ -34,6 +35,8 @@ print(str(e))
 e.cast_vote("red")
 e.cast_vote("blue")
 e.cast_vote("red")
+
+
 print(str(e))
 
 # Here to let us interact with the program; we'll discuss this next time
